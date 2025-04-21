@@ -1,201 +1,171 @@
-five essential elements of prompt engineering to maximize results with minimal effort.
+cinco elementos esenciales de la ingeniería de prompts para maximizar resultados con el mínimo esfuerzo.
 
 # IDEAS:
-- Selecting the right model significantly impacts the performance of your prompts and outputs.
-- A clear purpose for your prompt is crucial for achieving desired results effectively.
-- Dynamic variables allow for prompt reuse and adaptability in various contexts and applications.
-- Including concrete examples in prompts helps specify the desired output format and structure.
-- Output types can be either text or JSON, influencing the reliability of generated results.
-- The combination of model, purpose, variables, examples, and output creates effective prompts.
-- High-quality prompts can yield 80% of results with only 20% of the effort invested.
-- Static variables are fixed during development, while dynamic variables change based on context.
-- Prompt chaining enables the integration of outputs from one prompt as inputs for another.
-- JSON outputs provide structured data, essential for building complex AI systems and workflows.
-- Clear guidelines in prompts enhance the consistency and quality of generated outputs.
-- The Omni complete prompt allows for versatile applications by changing only a few variables.
-- Effective prompts can drive business results through improved user interactions and experiences.
-- Mastering prompt engineering is foundational for developing advanced AI agents and workflows.
-- The structure of prompts influences the ease of parsing and processing generated outputs.
-- Continuous improvement in prompt design leads to better performance in AI applications.
+- La selección del **modelo adecuado** tiene un impacto significativo en el rendimiento de tus prompts y resultados.
+- Un **propósito claro** para tu prompt es crucial para lograr resultados deseados de manera efectiva.
+- Las **variables dinámicas** permiten la reutilización de prompts y adaptabilidad en diferentes contextos y aplicaciones.
+- Incluir **ejemplos** concretos en los prompts ayuda a especificar el **formato y estructura** de la salida deseada.
+- Los tipos de **salida** pueden ser **texto o JSON**, lo que influye en la confiabilidad de los resultados generados.
+- La combinación de modelo, propósito, variables, ejemplos y tipo de salida crea **prompts efectivos**.
+- Los prompts de alta calidad pueden producir el 80% de los resultados con solo el 20% del esfuerzo invertido.
+- Las **variables estáticas** se fijan durante el desarrollo, mientras que las variables dinámicas cambian según el contexto.
+- El **chaining** de prompts permite la integración de salidas de un prompt como entradas para otro.
+- Las salidas en formato **JSON** proporcionan datos estructurados, fundamentales para construir sistemas y flujos de trabajo de IA complejos.
 
-# INSIGHTS:
-- The model selection is paramount; it dictates the overall effectiveness of your prompts.
-- A well-defined purpose streamlines the prompt creation process and enhances clarity in results.
-- Dynamic variables facilitate flexibility, allowing prompts to adapt to changing requirements easily.
-- Examples within prompts guide models toward producing outputs that meet specific expectations.
-- Choosing between text and JSON output shapes how data is utilized in subsequent processes.
+# Marco de cuatro niveles para la ingeniería de prompts
 
-# QUOTES:
-- "The model you choose will have the biggest impact on the performance of your prompt."
-- "If you write a great clear goal for your prompt, you will start to get those clear simple results."
-- "Dynamic variables are variables that you're going to want to update when you're reusing your prompts."
-- "Examples are really important because we can come in here and update this."
-- "Text output is default; it's straightforward and useful for simpler tasks."
-- "JSON outputs enable structured and reliable outputs which is crucial for building higher-order systems."
-- "These are the five most important elements of the prompt."
-- "By focusing on these elements, you can achieve 80% of the results with just 20% of the effort."
-- "Once you master The Prompt, you can then build great prompt chains."
-- "Whenever I'm creating new prompts now, this is how I like to structure it."
-- "Keep prompting, keep building, and I'll see you in the next one."
-  
+## Nivel 1: Prompt ad hoc
+- Prompts rápidos en lenguaje natural para prototipado ágil
+- Perfecto para explorar capacidades y comportamientos del modelo
+- Se pueden ejecutar en múltiples modelos para comparación
+- Ideal para tareas puntuales y experimentación
+```ejemplo
+Resume el contenido con 3 opiniones a favor del autor y 3 opiniones en contra del autor
 
-# Four Level framework for prompt engineering
-> [LLM library](https://github.com/simonw/llm)
-
-
-## Level 1: Ad hoc prompt
-- Quick, natural language prompts for rapid prototyping
-- Perfect for exploring model capabilities and behaviors
-- Can be run across multiple models for comparison
-- Great for one-off tasks and experimentation
-```example
-Summarize the content with 3 hot takes biased toward the author and 3 hot takes biased against the author
-
-...paste content here...
+...pega el contenido aquí...
 ```
 
-## Level 2: Structured prompt
-- Reusable prompts with clear purpose and instructions
-- Uses XML/structured format for better model performance
-- Contains static variables that can be modified
-- Solves well-defined, repeatable problems
-```example
-<purpose>
-    Summarize the given content based on the instructions and example-output
-</purpose>
+## Nivel 2: Prompt estructurado
+- Prompts reutilizables con propósito e instrucciones claras
+- Usa formato XML/estructurado para mejor rendimiento del modelo
+- Contiene variables estáticas que se pueden modificar
+- Resuelve problemas bien definidos y repetibles
+```ejemplo
+<proposito>
+    Resume el contenido dado según las instrucciones y el ejemplo de salida
+</proposito>
 
-<instructions>
-   <instruction>Output in markdown format</instruction>
-   <instruction>Summarize into 4 sections: High level summary, Main Points, Sentiment, and 3 hot takes biased toward the author and 3 hot takes biased against the author</instruction>
-   <instruction>Write the summary in the same format as the example-output</instruction>
-</instructions>
+<instrucciones>
+   <instruccion>Salida en formato markdown</instruccion>
+   <instruccion>Resume en 4 secciones: Resumen general, Puntos principales, Sentimiento, y 3 opiniones a favor del autor y 3 opiniones en contra del autor</instruccion>
+   <instruccion>Escribe el resumen en el mismo formato que el ejemplo de salida</instruccion>
+</instrucciones>
 
-<content>
-    {...} <<< update this manually
-</content>
+<contenido>
+    {...} <<< actualiza esto manualmente
+</contenido>
 ```
 
-## Level 3: Structured prompt with example output
-- Builds on Level 2 by adding example outputs
-- Examples guide the model to produce specific formats
-- Increases consistency and reliability of outputs
-- Perfect for when output format matters
-```example
-<purpose>
-    Summarize the given content based on the instructions and example-output
-</purpose>
+## Nivel 3: Prompt estructurado con ejemplo de salida
+- Se basa en el Nivel 2 añadiendo ejemplos de salida
+- Los ejemplos guían al modelo para producir formatos específicos
+- Aumenta la consistencia y confiabilidad de las salidas
+- Perfecto cuando el formato de salida es importante
+```ejemplo
+<proposito>
+    Resume el contenido dado según las instrucciones y el ejemplo de salida
+</proposito>
 
-<instructions>
-   <instruction>Output in markdown format</instruction>
-   <instruction>Summarize into 4 sections: High level summary, Main Points, Sentiment, and 3 hot takes biased toward the author and 3 hot takes biased against the author</instruction>
-   <instruction>Write the summary in the same format as the example-output</instruction>
-</instructions>
+<instrucciones>
+   <instruccion>Salida en formato markdown</instruccion>
+   <instruccion>Resume en 4 secciones: Resumen general, Puntos principales, Sentimiento, y 3 opiniones a favor del autor y 3 opiniones en contra del autor</instruccion>
+   <instruccion>Escribe el resumen en el mismo formato que el ejemplo de salida</instruccion>
+</instrucciones>
 
-<example-output>
+<ejemplo-salida>
 
-    # Title
+    # Título
 
-    ## High Level Summary
+    ## Resumen General
     ...
 
-    ## Main Points
+    ## Puntos Principales
     ...
 
-    ## Sentiment
+    ## Sentimiento
     ...
 
-    ## Hot Takes (biased toward the author)
+    ## Opiniones (a favor del autor)
     ...
 
-    ## Hot Takes (biased against the author)
+    ## Opiniones (en contra del autor)
     ...
-</example-output>
+</ejemplo-salida>
 
-<content>
-    {...} <<< update this manually
-</content>
+<contenido>
+    {...} <<< actualiza esto manualmente
+</contenido>
 ```
 
-## Level 4: Structured prompt with dynamic content
-- Production-ready prompts with dynamic variables
-- Can be integrated into code and applications
-- Infinitely scalable through programmatic updates
-- Foundation for building AI-powered tools and agents
-```example
-same as level 3 example but...
+## Nivel 4: Prompt estructurado con contenido dinámico
+- Prompts listos para producción con variables dinámicas
+- Se pueden integrar en código y aplicaciones
+- Escalabilidad infinita mediante actualizaciones programáticas
+- Base para construir herramientas y agentes potenciados por IA
+```ejemplo
+igual que el ejemplo del nivel 3 pero...
 
-<content>
-    {{content}} <<< update this dynamically with code
-</content>
+<contenido>
+    {{contenido}} <<< actualiza esto dinámicamente con código
+</contenido>
 ```
 
+---
 
-<output>
-# Preparing for the 100x Leap in Large Language Models (LLMs)
+## Preparándote para el salto 100x en Modelos de Lenguaje Grande (LLMs)
 
-## One-Sentence Takeaway
-**Master prompt engineering and expand your problem-solving scope to harness the coming 100x improvement in LLMs.**
+### Resumen en una frase
+**Domina la ingeniería de prompts y amplía tu alcance de resolución de problemas para aprovechar la inminente mejora 100x en los LLMs.**
 
 ---
 
-## Core Ideas
+## Ideas principales
 
-- **The 100x improvement in LLMs is inevitable**—success depends on preparing now.
-- **Current AI tools are primitive** compared to what's coming.
-- **Prompts are the new code**: mastering them is essential for future programming and knowledge work.
-- **Big Ass Prompts (BAPs)** unlock deeper capabilities by embedding domain-specific knowledge.
-- **Expanding the scope of problems** prepares you to use more powerful models as they emerge.
-
----
-
-## Actionable Strategies
-
-### 1. **Master Prompt Engineering**
-- Treat **prompts as the fundamental unit** of future software development.
-- Practice daily: **aim to write 100 prompts per day**.
-- Avoid overreliance on libraries—**understand the raw capabilities** of the models first.
-- Use prompts for everything: **code, docs, feedback**, and more.
-- Regular practice builds intuition and **reveals model limits and potential**.
-
-### 2. **Use Big Ass Prompts (BAPs)**
-- Create large, rich prompts filled with **your unique domain knowledge**.
-- Solve complex problems that simple prompts cannot address.
-- Use BAPs to **stretch the capabilities** of current LLMs and find hidden potential.
-
-### 3. **Expand Your Problem Set**
-- Tackle **real-world, unaddressed problems** using current AI tools.
-- Experiment with workflows and **apply AI in creative, useful ways**.
-- This builds skill and readiness for future, more capable models.
+- **La mejora 100x en los LLMs es inevitable**—el éxito depende de prepararse ahora.
+- **Las herramientas de IA actuales son primitivas** comparadas con lo que viene.
+- **Los prompts son el nuevo código**: dominarlos es esencial para la programación y el trabajo del conocimiento del futuro.
+- **Expandir el alcance de los problemas** te prepara para usar modelos más potentes a medida que surgen.
 
 ---
 
-## Habits for Long-Term Success
+## Estrategias accionables
 
-- **Write 100 prompts a day** to develop fluency and insight.
-- **Document learnings** from prompt experiments to track growth.
-- Stay proactive by **following AI trends** and adapting early.
-- Regularly reflect to **identify improvement areas** in your prompt skills.
-- Delay tool abstraction—**first, master the fundamentals**.
+### 1. **Domina la ingeniería de prompts**
+- Trata **los prompts como la unidad fundamental** del desarrollo de software del futuro.
+- Practica a diario: **apunta a escribir 100 prompts por día**.
+- Evita depender demasiado de librerías—**entiende primero las capacidades crudas** de los modelos.
+- Usa prompts para todo: **código, documentación, feedback**, y más.
+- La práctica regular construye intuición y **revela los límites y el potencial del modelo**.
+
+### 2. **Usa Rich Prompts**
+- Crea prompts grandes y ricos llenos de **tu conocimiento único de dominio**.
+- Resuelve problemas complejos que los prompts simples no pueden abordar.
+- Usa Rich Prompts para **llevar al límite las capacidades** de los LLMs actuales y encontrar potencial oculto.
+
+### 3. **Expande tu conjunto de problemas**
+- Aborda **problemas reales y no resueltos** usando las herramientas de IA actuales.
+- Experimenta con flujos de trabajo y **aplica IA de formas creativas y útiles**.
+- Esto desarrolla habilidad y preparación para modelos futuros más capaces.
 
 ---
 
-## Key Insights
+## Hábitos para el éxito a largo plazo
 
-- Anticipating the future is a core skill in engineering.
-- The **real potential of current models** remains largely untapped.
-- Understanding limits = unlocking innovation.
-- Practicing now = **competitive advantage** when 100x models arrive.
+- **Escribe 100* prompts al día** para desarrollar fluidez y perspectiva.
+- **Documenta los aprendizajes** de los experimentos con prompts para seguir tu crecimiento.
+- Mantente proactivo **siguiendo tendencias de IA** y adaptándote temprano.
+- Reflexiona regularmente para **identificar áreas de mejora** en tus habilidades de prompts.
+- Retrasa la abstracción de herramientas—**primero domina los fundamentos**.
 
 ---
 
-## Memorable Quotes
+## Ideas clave
 
-> “The 100x LLM is coming; it's not a question of *if*, it's a question of *when*.”
+- Anticipar el futuro es una habilidad central en ingeniería.
+- El **verdadero potencial de los modelos actuales** permanece en gran parte sin explotar.
+- Entender los límites = desbloquear innovación.
+- Practicar ahora = **ventaja competitiva** cuando lleguen los modelos 100x.
 
-> “The prompt is the new fundamental unit of knowledge work and programming.”
+---
 
-> “A BAP is a large prompt filled up with your unique domain-specific data.”
+## Frases memorables
 
-> “Aim for 100 prompts a day; this is how we evolve into the next level of software engineering.”
+> “El LLM 100x está llegando; no es una cuestión de *si*, sino de *cuándo*.”
 
-> “You are not even near the limits of current models, prompts, and prompt chains.”
+> “El prompt es la nueva unidad fundamental del trabajo del conocimiento y la programación.”
+
+> “Un BAP es un prompt grande lleno de tus propios datos específicos de dominio.”
+
+> “Apunta a 100 prompts al día; así evolucionamos al siguiente nivel de la ingeniería de software.”
+
+> “Ni siquiera estás cerca de los límites de los modelos, prompts y cadenas de prompts actuales.”
