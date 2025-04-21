@@ -1,9 +1,5 @@
 # Dominando el chaining Minimalista de Prompts en Flujos de Trabajo con IA
 
-## Conclusión en una frase  
-**Utiliza métodos minimalistas de chaining de prompts para aumentar tu productividad, evitar soluciones sobreingenierizadas y mantener el control total sin depender de bibliotecas externas.**
-
----
 
 ## Ideas Clave
 
@@ -43,7 +39,7 @@
 ## Hábitos para Mejorar tu Ingeniería de Prompts
 
 - **Refina regularmente la estructura de tus prompts** para mantener claridad y precisión.
-- **Mantente actualizado sobre las capacidades de nuevos modelos** (como Claude 3.5).
+- **Mantente actualizado sobre las capacidades de nuevos modelos**.
 - **Trabaja directamente con prompts crudos** antes de introducir herramientas externas.
 - Usa chainings simples por defecto, y escala solo si el problema lo requiere.
 - Desarrolla reglas propias para decidir cuándo encadenar y cuándo no.
@@ -69,7 +65,7 @@
 
 > “Mantener las abstracciones simples permite resolver problemas de manera más efectiva.”
 
-> “Una rúbrica clara ayuda a decidir cuándo usar cadenas de prompts y cuándo no.”
+> “Un metodo de evaluacion claro ayuda a decidir cuándo usar cadenas de prompts y cuándo no.”
 
 ---
 
@@ -77,7 +73,6 @@
 
 - El chaining minimalista puede resolver **hasta el 80 % de los casos de uso secuenciales** sin bibliotecas externas.
 - Usado estratégicamente, el chaining **maximiza el rendimiento y reduce errores**.
-- Modelos como Claude 3.5 muestran el **rápido avance de las capacidades en IA generativa**.
 - Las bibliotecas muchas veces **añaden complejidad y dificultan el aprendizaje profundo**.
 - El mejor rendimiento surge de **prompts claros, no de capas de abstracción**.
 
@@ -89,3 +84,4 @@
 - **Evalúa la complejidad de la tarea** antes de decidir entre un solo prompt o una cadena.
 - **Evita abstraer demasiado pronto**: domina primero los fundamentos del prompting.
 - Mantén tus flujos de trabajo claros, controlables y adaptables para aprovechar al máximo las capacidades actuales y futuras de la IA.
+
