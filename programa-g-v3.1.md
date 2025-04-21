@@ -1,15 +1,3 @@
-Okay, basándome en la crítica, aquí tienes una propuesta de programa mejorado que intenta abordar los puntos clave, especialmente el ritmo y la profundidad, junto con su checklist correspondiente.
-
-**Filosofía de los Cambios:**
-
-*   **Priorizar y Profundizar:** Reducir el *número* de técnicas demostradas en vivo para dar más tiempo a las fundamentales (Prompting, JSON, Chaining básico) y al hands-on principal.
-*   **Simplificar Introducción:** Hacer la conexión Cynefin -> CoT -> Modelo -> Prompt más directa y rápida.
-*   **Integrar Conceptos:** Tratar Chaining y Tool Use/Agentes básicos como parte de "Workflows" en lugar de demos separadas y complejas.
-*   **Gestionar lo Avanzado:** Mover conceptos como Agentes complejos y Memoria a una mención/recurso, no una demo en vivo, para evitar sobrecarga y ahorrar tiempo.
-*   **Reforzar el Eje Central:** Asegurar que la adaptación del prompt (`o1` vs `GPT-4o`) se muestre y practique explícitamente.
-
----
-
 ## Programa Mejorado v3.1: Integrando IA en tu Código con LLMs
 
 **Duración:** 3 horas (180 minutos) - *Ritmo ajustado para mayor profundidad*
@@ -17,8 +5,6 @@ Okay, basándome en la crítica, aquí tienes una propuesta de programa mejorado
 **Público objetivo:** Desarrolladores (mix Sr/Jr/SSr). Familiaridad básica IA. JS/PHP/Python. 50% solo.
 
 **Objetivo del Encuentro:** (Sin cambios) Capacitar para identificar complejidad, seleccionar estrategia LLM Y tipo de modelo, desarrollar prompts adaptados, usar Metaprompting, construir workflows básicos, aplicar en hands-on.
-
-**Materiales Pre-Taller (Obligatorio):** (Sin cambios) Resumen Cynefin simplificado, 4-Level Prompting, **Intro Modelos Razonamiento (`o1`) vs. No-Razonamiento (`GPT-4o`)**. (Opcional) Link video "LLM Basics".
 
 ## Estructura Detallada v3.1:
 
