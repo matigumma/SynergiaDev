@@ -13,10 +13,6 @@ Capacitar a los desarrolladores para:
 *   Construir workflows y agentes básicos, con énfasis en **interacción y aplicabilidad práctica**.
 *   Aplicar conceptos en **actividades hands-on guiadas** y ejercicios de diseño colaborativo.
 
-**Materiales Pre-Taller (Obligatorio - 5-10 min lectura):**
-*   Resumen conciso (1-2 páginas) explicando Cynefin simplificado y el 4-Level Prompting Framework.
-*   (Opcional) Link a video corto "LLM Basics" para el 12.5% sin experiencia previa.
-*   *Objetivo:* Nivelar conceptos básicos y ahorrar tiempo introductorio.
 
 **Estructura del Programa Detallada:**
 
