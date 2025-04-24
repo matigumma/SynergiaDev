@@ -6,7 +6,9 @@ cinco elementos esenciales de la ingeniería de prompts para maximizar resultado
 - Las **variables dinámicas** permiten la reutilización de prompts y adaptabilidad en diferentes contextos y aplicaciones.
 - Incluir **ejemplos** concretos en los prompts ayuda a especificar el **formato y estructura** de la salida deseada.
 - Los tipos de **salida** pueden ser **texto o JSON**, lo que influye en la confiabilidad de los resultados generados.
+
 - La combinación de modelo, propósito, variables, ejemplos y tipo de salida crea **prompts efectivos**.
+
 - Los prompts de alta calidad pueden producir el 80% de los resultados con solo el 20% del esfuerzo invertido.
 - Las **variables estáticas** se fijan durante el desarrollo, mientras que las variables dinámicas cambian según el contexto.
 - El **chaining** de prompts permite la integración de salidas de un prompt como entradas para otro.
