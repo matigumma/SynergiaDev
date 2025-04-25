@@ -2,7 +2,7 @@
 
 # SinergIA DEV - 24 Abril 2025 - ATICMA
 
-[Presentacion](https://github.com/sinergiadev/ABRIL-2025/raw/main/presentacion/GenAI%20for%20Developers.pdf)
+[Presentacion](https://github.com/matigumma/SynergiaDev/blob/main/ABRIL-2025/presentacion/GenAI%20for%20Developers.pdf)
 
 <img src="image.png" width="50%">
 
